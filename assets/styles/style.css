@@ -1,0 +1,435 @@
+:root {
+  --primary: #FFC629;
+  --details: #006ECF;
+  --text: #8A8A8A;
+  --white: #FFF;
+  --black: #000;
+  --shadow: #00000026;
+
+  --fontSaira: 'Saira', sans-serif;
+  --fontSairaExtra: 'Saira Extra Condensed', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: var(--fontSairaExtra);
+  font-size: 1.6rem;
+}
+
+::selection {
+  color: var(--black);
+  background: var(--details);
+}
+
+
+/* General */
+:is(h1) {
+  margin: 0;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 40px;
+}
+
+form button {
+  width: 180px;
+  padding: 12px 20px;
+  color: var(--white);
+  background-color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 40px;
+}
+
+form button:hover {
+  font-weight: 600;
+  color: var(--black);
+  background-color: transparent;
+}
+
+
+/* Class */
+.tvia-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+
+/*
+  site: Header 
+*/
+header {
+  padding: 20px 20px 40px;
+  font-family: var(--fontSaira);
+  font-size: 1.4rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+header .tvia-container {
+  gap: 30px;
+}
+
+.tvia-header--info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.tvia-header--info a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* 
+  site: Main 
+*/
+.tvia-hero {
+  min-height: 50vh;
+  padding: 60px 20px 0;
+  font-family: var(--fontSairaExtra);
+  font-weight: 800;
+  background: no-repeat 0% bottom / 60% url(../images/bg-road.webp);
+  background-color: var(--primary);
+}
+
+.tvia-hero .tvia-container {
+  display: grid;
+  grid-template-columns: 62.5% 1fr;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.tvia-hero h1 {
+  margin-bottom: 20px;
+  font-size: 9.6rem;
+  color: var(--white);
+  line-height: .85em;
+}
+
+.tvia-hero h1 small {
+  color: var(--black);
+}
+
+.tvia-hero .tvia--info {
+  margin-bottom: -12px;
+  display: flex;
+  align-items: center;
+  gap: 8%;
+}
+
+.tvia-hero .tvia-image img {
+  width: 100%;
+}
+
+.tvia-hero .tvia-promotion {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.tvia-hero .tvia-promotion p {
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.tvia-hero .tvia--info-policies {
+  font-size: 2.2rem;
+  color: var(--details);
+  text-align: center;
+  text-decoration: underline;
+}
+
+.tvia--form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tvia--form {
+  width: 100%;
+  padding: 24px 40px 44px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.tvia--form-title {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.tvia--form p:not(.tvia--form-title) {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.tvia--form-container img {
+  margin-top: -20px;
+  margin-bottom: -40px;
+}
+
+
+/* section: form */
+.tvia--form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#tvia-form-message > div {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+
+/* section: Benefits */
+.tvia-benefits {
+  padding: 48px 20px;
+}
+
+.tvia-benefits h3 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+
+/* 
+  site: Footer 
+*/
+footer {
+  padding: 48px 20px;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+footer .tvia-container {
+  gap: 40px;
+}
+
+footer p {
+  line-height: 1.4em;
+}
+
+.tvia-footer--info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.tvia-footer--info .tvia--info-content {
+  display: flex;
+  gap: 40px;
+}
+
+.tvia-footer--info ul {
+  display: flex;
+  gap: 24px;
+}
+
+.tvia-footer--info ul li {
+  position: relative;
+}
+
+.tvia-footer--info ul li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  background-color: var(--white);
+}
+
+
+@media (max-width: 1024px) {
+  /* component: Hero */
+  .tvia-hero {
+    padding: 48px 20px 40px;
+  }
+
+  .tvia-hero .tvia-container {
+    grid-template-columns: 55% 1fr;
+  }
+
+  .tvia-hero h1 {
+    font-size: 8rem;
+  }
+
+  .tvia-hero .tvia--info {
+    gap: 5%;
+  }
+
+  .tvia-hero .tvia-promotion p {
+    font-size: 3rem;
+  }
+
+  .tvia-hero .tvia--info-policies {
+    font-size: 2rem;
+  }
+
+  .tvia--form {
+    padding: 20px 30px 40px;
+  }
+
+  .tvia--form-title {
+    font-size: 4rem;
+  }
+
+  /* Footer */
+  .tvia-footer--info .tvia--info-content {
+    gap: 30px;
+  } 
+}
+
+
+@media (max-width: 767px) {
+  /* Header */
+  header {
+    padding: 20px;
+  }
+
+  header .tvia-container {
+    gap: 30px;
+  }
+
+  .header--logo {
+    width: 150px;
+  }
+
+  header .tvia-header--info {
+    gap: 12px;
+  }
+
+  /* Hero */
+  .tvia-hero {
+    padding: 40px 20px 0;
+    background-size: 180%;
+    background-position: center center;
+  }
+
+  .tvia-hero .tvia-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .tvia-hero h1 {
+    margin-bottom: 30px;
+    font-size: 5.6rem;
+    text-align: center;
+    line-height: 1em;
+  }
+
+  .tvia-hero h1 small {
+    line-height: 0;
+  }
+
+  .tvia-hero .tvia--info {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .tvia-hero .tvia--info .tvia-image {
+    max-width: 190px;
+  }
+
+  .tvia-hero .tvia-promotion {
+    max-width: 220px;
+    gap: 12px;
+  }
+
+  .tvia-hero .tvia-promotion img {
+    max-width: 100px;
+  }
+
+  .tvia-hero .tvia-promotion p {
+    font-size: 2.6rem;
+  }   
+
+  .tvia-hero .tvia--info-policies {
+    font-size: 1.8rem;
+  }
+
+  .tvia--form-container {
+    margin-top: -20px;
+  }
+
+  .tvia--form-title {
+    font-size: 3.4rem;
+  }
+
+  .tvia--form-container img {
+    margin-top: -14px;
+    margin-bottom: -30px;
+  }
+
+  /* section: Benefits */
+  .tvia-benefits {
+    padding: 40px 20px;
+  }
+
+  .tvia-benefits h3 {
+    font-size: 3rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 20px;
+  }
+
+}
